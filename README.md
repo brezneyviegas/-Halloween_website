@@ -1,5 +1,10 @@
 # Halloween_website
 
+## Prerequisites:
+- Minikube
+- Docker
+- Kubectl
+
 ### **Workshop Outline**
 
 1. **Setup and Introduction to Minikube**
