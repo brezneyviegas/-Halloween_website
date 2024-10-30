@@ -70,6 +70,7 @@
     Then, build the image:
     
     ```bash
+    eval $(minikube docker-env)
     docker build -t halloween-website .
     
     ```
