@@ -80,7 +80,8 @@
     Use the built Docker image to create a Kubernetes deployment.
     
     ```bash
-    kubectl create deployment halloween-website --image=halloween-website
+    kubectl run halloween-website --image=halloween-website:latest --image-pull-policy=Never
+
     
     ```
     
@@ -103,7 +104,7 @@
     Create a service to expose the Halloween website:
     
     ```bash
-    kubectl expose deployment halloween-website --type=NodePort --port=80
+    kubectl expose pod halloween-website --type=NodePort --port=80
     
     ```
     
