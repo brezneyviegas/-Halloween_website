@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted Halloween</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow-text">Welcome to the Haunted Halloween Site!</h1>
+        <p>Beware! This site is haunted by the spirits of code past...</p>
+        <button onclick="playSpookySound()">Play Spooky Sound</button>
+        <div id="thank-you" class="thank-you hidden">Thank you for participating !</div>
+    </div>
+
+    <!-- Bat and Ghost Animation Elements -->
+    <div class="bat bat1"></div>
+    <div class="bat bat2"></div>
+    <div class="bat bat3"></div>
+    <div class="ghost ghost1"></div>
+    <div class="ghost ghost2"></div>
+    <div class="ghost ghost3"></div>
+
+    <!-- Spooky Sound -->
+    <audio id="spooky-sound" src="images/spooky-sound.mp3"></audio>
+
+    <script>
+        function playSpookySound() {
+            const spookySound = document.getElementById("spooky-sound");
+            const thankYouMessage = document.getElementById("thank-you");
+
+            spookySound.play();
+
+            // Show "Thank you" message when audio ends
+            spookySound.onended = function() {
+                thankYouMessage.classList.remove("hidden");
+            };
+        }
+    </script>
+</body>
+</html>
