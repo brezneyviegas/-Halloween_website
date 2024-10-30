@@ -23,7 +23,7 @@
     Ensure Minikube is running with:
     
     ```bash
-    minikube start
+    minikube start --driver=docker
     
     ```
     
